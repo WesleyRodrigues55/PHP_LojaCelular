@@ -50,7 +50,18 @@ body,
         padding: 0px;
         margin: 10px 0px;
         border-radius: 20px;
-        background: rgba(25, 25, 25, 0.6);
+        background: white;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    .content .content-center .boxs {
+        /* responsive */
+        margin: 0 200px;
+        padding: 120px 25px;
+        border-radius: 5px;
+        /* background: rgba(25, 25, 25, 0.5); */
+        background: white;
     }
 }
 
@@ -108,7 +119,7 @@ body,
 @media screen and (max-width:768px) {
     .content .content-center .boxs .box-form .box-group>input {
         /* responsive*/
-        color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
     }
 }
 
@@ -150,16 +161,19 @@ h2 {
     padding-bottom: 30px;
 }
 
+h3 {
+    color: #2c42a1;
+}
+
 label {
     color: rgb(0, 0, 0);
 }
 
 @media screen and (max-width:768px) {
-    .a-cad,
     p,
     h1,
     h2,
     .box-group>label {
-        color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
     }
 }

@@ -15,8 +15,8 @@
   $consulta = mysqli_query($conexao, "SELECT id, nome, nivel FROM usuario WHERE (nome = '$usuario') AND (senha = '$senha') AND (ATIVO = 1) LIMIT 1");
   if (mysqli_num_rows($consulta) != 1) {
       // Mensagem de erro quando os dados são inválidos e/ou o usuário não foi encontrado
-      echo"Usuário ou senha incorretos!";
-      echo'<a href="alterarUsuario.php?pesquisa=">Clique aqui para alterar seu(a) usuário ou senha</a>';
+      include("../PHP/userIncorreto.php");
+    //   echo'<a href="alterarUsuario.php?pesquisa=">Clique aqui para alterar seu(a) usuário ou senha</a>';
       exit;
   } else {
       // Salva os dados encontados na variável $resultado

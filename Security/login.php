@@ -17,26 +17,22 @@
     <header class="content container-fluid">
         <div class="content-center container-fluid">
             <div class="row boxs">
-                <div class="col-md-6">
+                <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
                     <div class="box-info">
                         <h1>LOGO</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, commodi?</p>
                         <h3>galeria de celulares amostra</h3>
                         <div class="gallery row" style="padding: 30px 0;">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <img src="../IMG/note10128GB.png" style="width: 150px;">
                             </div>
-                            <div class="col-md-6">
-                                <img src="../IMG/RedmiNote10128GB.png" style="width: 150px;">
-                            </div>
-
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
                     <!-- formulário de login -->
                     <form class="form-group box-form" action="validacao.php" method="post">
-                        <h2>Log in</h2>
+                        <h2>Login</h2>
                         <!-- input user -->
                         <div class="form-group box-group">
                             <label for="txUsuario">Username</label>
@@ -64,7 +60,7 @@
                 <div class="modal-content" id="modal-color">
                     <!-- Aqui chama o título do modal -->
                     <div class="modal-header">
-                        <h1 class="modal-title" id="exampleModalLongTitle" style="color: black">Dados para cadastro</h1>
+                        <h3 class="modal-title" id="exampleModalLongTitle">Dados para cadastro</h3>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
