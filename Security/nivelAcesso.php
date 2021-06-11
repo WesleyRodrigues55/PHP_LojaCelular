@@ -37,10 +37,10 @@ function permissaoAdm(){
     $libera_acoes = 2;
     if (($_SESSION['UsuarioNivel'] == $libera_acoes)) {
       //cadastro de produto
-      echo'<a href=""><button class="btn btn-primary" style="margin: 5px">Cadastrar produto</button></a>';
+      echo'<a href="PHP/cadastroProduto.php"><button class="btn btn-primary" style="margin: 5px">Cadastrar produto</button></a>';
 
       //lista de produtos
-      echo'<a href=""><button class="btn btn-primary" style="margin: 5px">Lista de produtos</button></a>';
+      echo'<a href="PHP/produtoLista.php?pesquisar="><button class="btn btn-primary" style="margin: 5px">Lista de produtos</button></a>';
 
       //cadastro de adm e usuário
       echo'<a href=""><button class="btn btn-primary" style="margin: 5px">Cadastrar um administrador/usuário</button></a>';

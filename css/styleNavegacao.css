@@ -1,0 +1,58 @@
+body {
+    overflow: hidden;
+}
+
+
+/* usuário logado */
+
+.user {
+    background-color: #2c42a1;
+    padding: 20px;
+}
+
+
+/* navegação */
+
+.nav {
+    background-color: #2c42a1;
+}
+
+.nav .logo {
+    color: white;
+    font-size: 50px;
+}
+
+.nav .items {
+    list-style: none;
+}
+
+.nav .items>a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav .items .items-nav {
+    margin: 5px 30px;
+    background-color: #2e46ad;
+    padding: 10px 30px;
+}
+
+
+/* categorizando a loja */
+
+.categorizando {
+    background-color: black;
+}
+
+.categorizando>ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.categorizando>ul>li {
+    list-style: none;
+    color: white;
+}
