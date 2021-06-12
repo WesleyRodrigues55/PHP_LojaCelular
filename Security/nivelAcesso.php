@@ -36,16 +36,26 @@ function permissaoAdm(){
   function libera(){
     $libera_acoes = 2;
     if (($_SESSION['UsuarioNivel'] == $libera_acoes)) {
-      //cadastro de produto
-      echo'<a href="PHP/cadastroProduto.php"><button class="btn btn-primary" style="margin: 5px">Cadastrar produto</button></a>';
+      //botão de cadastro de produto
+      echo'<a href="PHP/cadastroProduto.php"><button class="btn btn-primary" style="margin: 5px" data-toggle="modal" data-target="#idmodalCadastrar">Cadastrar produto</button></a>';
 
       //lista de produtos
       echo'<a href="PHP/produtoLista.php?pesquisar="><button class="btn btn-primary" style="margin: 5px">Lista de produtos</button></a>';
 
       //cadastro de adm e usuário
-      echo'<a href=""><button class="btn btn-primary" style="margin: 5px">Cadastrar um administrador/usuário</button></a>';
+      echo'<a href="PHP/cadastroUsuario.php"><button class="btn btn-primary" style="margin: 5px">Cadastrar um administrador/usuário</button></a>';
 
+      //lista de adm e usuário
+      echo'<a href="PHP/usuarioLista.php"><button class="btn btn-primary" style="margin: 5px">Lista de administrador/usuário</button></a>';
+
+      //carrossel
+      echo'<a href="PHP/carrosselLista.php"><button class="btn btn-primary" style="margin: 5px">Carrossel</button></a>';
     }
   }
 
   ?>
+  
+    <!-- script para efeitos e ações (modal) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>

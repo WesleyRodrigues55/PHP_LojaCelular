@@ -24,7 +24,7 @@
     if (!$resultado) {
         die('Query inválida: ' . @mysqli_error($conexao));
     } else {
-        Header('Location: produtoLista.php?txtpesquisar=');
+        Header('Location: produtoLista.php?pesquisar=');
     }
 
     //fechar conexao com o banco
