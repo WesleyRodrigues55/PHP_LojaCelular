@@ -38,7 +38,7 @@
 
     <h1>Excluindo Carrossel</h1>
 
-    <form action="excluirprodutoCon.php" method="post">
+    <form action="excluirCarrosselCon.php" method="post">
         <h3>ID</h3>
         <input type="number" name="id" value='<?php echo $dados['ID']; ?>' readonly>
 

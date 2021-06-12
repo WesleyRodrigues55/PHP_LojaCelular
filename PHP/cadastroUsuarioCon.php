@@ -8,7 +8,7 @@
     $cpf = $_POST['cpf'];
     $nivel = $_POST['nivel'];
     $img = $_POST['img'];
-    $status = $_POST['ativo'];
+    $status = $_POST['status'];
 
     //variavel que insere dados na tabela usuario
     $insert = "INSERT INTO usuario VALUES(0, '$nome', '$senha', $cpf, '$nivel', '$img', '$status')";

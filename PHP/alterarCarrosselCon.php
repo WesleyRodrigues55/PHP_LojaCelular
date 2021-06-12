@@ -16,7 +16,7 @@
     if (!$resultado) {
         die('Query inválida: ' . @mysqli_error($conexao));
     } else {
-        Header('Location: carrosselLista.php?txtpesquisar=');
+        Header('Location: carrosselLista.php?pesquisar=');
     }
 
     //fechar conexao com o banco

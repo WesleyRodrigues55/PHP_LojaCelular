@@ -10,40 +10,40 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
     <style>
-    h1 {
-        color: #2c42a1;
-    }
+        h1 {
+            color: #2c42a1;
+        }
 
-    /* para input type="file" */
-    input[type="file"] {
-      display: none;
-    }
-        
-    .upfile {
-      padding: 10px 20px;
-      background-color: #2c42a1;
-      color: white;
-      text-transform: uppercase;
-      text-align: center;
-      margin-top: 10px;
-      cursor: pointer;
-    }
+        /* para input type="file" */
+        input[type="file"] {
+        display: none;
+        }
+            
+        .upfile {
+        padding: 10px 20px;
+        background-color: #2c42a1;
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 10px;
+        cursor: pointer;
+        }
 
-    .button {
-      border-radius: none;
-      border: none;
-      background-color: #2c42a1;
-      font-size: 20px;
-      padding: 15px 30px;
-      color: white;
-      font-weight: bold;
-      margin-bottom: 10px;
-      margin-top: 20px;
-    }
+        .button {
+        border-radius: none;
+        border: none;
+        background-color: #2c42a1;
+        font-size: 20px;
+        padding: 15px 30px;
+        color: white;
+        font-weight: bold;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        }
 
-    svg {
-      margin-right: 10px;
-    }
+        svg {
+        margin-right: 10px;
+        }
   </style>
 </head>
 <body>

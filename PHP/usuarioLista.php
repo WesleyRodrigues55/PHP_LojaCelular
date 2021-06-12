@@ -51,6 +51,7 @@
             <td style="padding: 15px;">Nível</td>
             <td style="padding: 15px;">Ativo</td>
             <td style="padding: 15px;">Imagem</td>
+            <td>Ações</td>
         </tr>
         <!-- começando a lista de usuarios da tabela usuario -->
         <?php while($dado = $con->fetch_array()) { ?>
@@ -63,11 +64,13 @@
             <td><?php echo $dado['ATIVO'];?></td>
             <td><?php echo $dado['IMG'];?></td>
 
-            <td><button><a href="alterarUsuario.php?id=<?php echo $dado['ID']; ?>">
-            Alterar</a></button></td>
+            <td>
+                <button><a href="alterarUsuario.php?id=<?php echo $dado['ID']; ?>">
+                Alterar</a></button>
 
-            <td><button><a href="excluirUsuario.php?id=<?php echo $dado['ID']; ?>">
-            Excluir</a></button></td>
+                <button><a href="excluirUsuario.php?id=<?php echo $dado['ID']; ?>">
+                Excluir</a></button>
+            </td>
         </tr>
         <?php } ?>
     </table>

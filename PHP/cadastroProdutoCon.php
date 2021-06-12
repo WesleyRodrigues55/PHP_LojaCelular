@@ -15,19 +15,19 @@
     $qualidade = $_POST['qualidade'];
 
     //variavel que insere dados na tabela usuario
-    $insert = "INSERT INTO produto VALUES(0, '$descricao', '$marca', $preco, '$img', '$cor', '$armazenamento', '$ram', '$tela', '$peso', '$qualidade')";
+     $insert = "INSERT INTO produto VALUES(0, '$descricao', '$marca', $preco, '$img', '$cor', '$armazenamento', '$ram', '$tela', '$peso', '$qualidade')";
+     $resultado = @mysqli_query($conexao, $insert);
+
+     $insertC = "INSERT INTO carrossel VALUES(0 , '$descricao', '$img')";
+     $resultadoC = @mysqli_query($conexao, $insertC);
 
     //executando instrução SQL (tratar erros)
-    $resultado = @mysqli_query($conexao, $insert);
-
-    //tratação de erro com if e else
-    if (!$resultado)
+    if (!$resultado && !$resultadoC)
     {
         //mata o processo caso a conexao não dê certo
         die('Query inválida: ' . @mysqli_error($conexao));
     } else {
         //exibe uma mensagem na tela de sucesso no insert
-        // echo "Registro cadastrado com sucesso!";
         header('Location: ../index.php?pesquisar=');
     }
 

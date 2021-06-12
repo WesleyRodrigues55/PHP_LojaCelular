@@ -183,26 +183,23 @@
                                     <!-- Aqui chama o Body dele (conteúdo) -->
                                     <div class="modal-body" style="text-align: left" style="padding: 30px">
                                         <?php
-                                        $ID = $dado['ID'];
-                                        //selecionando o usuario com o id fornecido
-                                        $selectE = "SELECT * FROM produto WHERE ID = '$ID'";
+                                            $ID = $dado['ID'];
+                                            //selecionando o usuario com o id fornecido
+                                            $selectE = "SELECT * FROM produto WHERE ID = '$ID'";
 
-                                        $resultadoE = @mysqli_query($conexao, $selectE);
+                                            $resultadoE = @mysqli_query($conexao, $selectE);
 
-                                        if (!$resultadoE) {
-                                            die('Query inválida: ' . @mysqli_error($conexao));
-                                        } else {
-                                            $numE = @mysqli_num_rows($resultadoE);
-                                            if ($numE == 0) {
-                                                echo "ID: Não localizado!" . '<br><br>';
-                                                echo '<input type="button" onclick="window.location' . "'produtoLista.php'" . ';"value="Voltar">';
+                                            if (!$resultadoE) {
+                                                die('Query inválida: ' . @mysqli_error($conexao));
                                             } else {
-                                                $dadosE = mysqli_fetch_array($resultadoE);
+                                                $numE = @mysqli_num_rows($resultadoE);
+                                                if ($numE == 0) {
+                                                    echo "ID: Não localizado!" . '<br><br>';
+                                                    echo '<input type="button" onclick="window.location' . "'produtoLista.php'" . ';"value="Voltar">';
+                                                } else {
+                                                    $dadosE = mysqli_fetch_array($resultadoE);
+                                                }
                                             }
-                                        }
-
-                                        //fecha conexao com o banco
-                                        mysqli_close($conexao);
                                         ?>
                                         <form action="excluirProdutoCon.php" method="post">
                                             <div class="row">
@@ -261,7 +258,7 @@
                         <!-- the end modal -->
                     </td>
                 </tr>
-            <?php } ?>
+            <?php } mysqli_close($conexao);?>
         </table>
     </section>
 

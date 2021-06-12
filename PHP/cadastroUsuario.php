@@ -27,7 +27,7 @@
         <label>CPF</label><br>
         <input type="text" name="cpf"><br><br>
 
-        <div class="form-group" width="" style="width: 300px;">
+        <div class="form-group">
         <label for="perfil">Perfil:</label>
             <select class="form-control input-lg" name="nivel">
                 <option value="2">Administrador</option>
@@ -35,7 +35,7 @@
             </select>
         </div>
 
-        <div class="form-group" width="" style="width: 300px;">
+        <div class="form-group">
         <label for="status">Status:</label>
             <select class="form-control input-lg" name="status">
                 <option value="1">Ativo</option>

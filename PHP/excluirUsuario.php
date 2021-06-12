@@ -5,7 +5,7 @@
     //recuperar o id que passamos pela URL
     $id = $_GET['id'];
 
-    $resultado = @mysqli_query($conexao, $select);
+    $resultado = @mysqli_query($conexao, "SELECT * FROM usuario WHERE ID='$id'");
 
     if (!$resultado) {
         die('Query inválida: ' . @mysqli_error($conexao));
