@@ -46,10 +46,10 @@ function permissaoAdm(){
       echo'<a href="PHP/cadastroUsuario.php"><button class="btn btn-primary" style="margin: 5px">Cadastrar um administrador/usuário</button></a>';
 
       //lista de adm e usuário
-      echo'<a href="PHP/usuarioLista.php"><button class="btn btn-primary" style="margin: 5px">Lista de administrador/usuário</button></a>';
+      echo'<a href="PHP/usuarioLista.php?pesquisar="><button class="btn btn-primary" style="margin: 5px">Lista de administrador/usuário</button></a>';
 
       //carrossel
-      echo'<a href="PHP/carrosselLista.php"><button class="btn btn-primary" style="margin: 5px">Carrossel</button></a>';
+      echo'<a href="PHP/carrosselLista.php?pesquisar="><button class="btn btn-primary" style="margin: 5px">Carrossel</button></a>';
     }
   }
 
