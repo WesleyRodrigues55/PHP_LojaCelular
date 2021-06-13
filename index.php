@@ -1,4 +1,5 @@
-<?php 
+<?php
+    include("Security/conexaoBanco.php");
     include("Security/nivelAcesso.php");
     permissaoGeral();
 ?>
@@ -17,9 +18,8 @@
     <!-- navegação do site -->
     <div class="container-fluid d-flex align-items-center justify-content-center user">
         <!-- recebendo dados do logiun do usuario -->
-        <!-- <p style="color: white; font-size: 25px; margin: 0 20px"><//?php echo "Bem vindo, " . $dadosUsuario['NOME']; ?></p> -->
+        <!-- <p style="color: white; font-size: 25px; margin: 0 20px"></p> -->
         <!-- botões de ações do usuário -->
-
         <!-- botão logout -->
         <a href="Security/logout.php"><button class="btn btn-warning" style="margin: 0 20px">
             <svg xmlns="http://www.w3.org/2000/svg" style="color: white" width="19" height="19" style="margin: 0 5px;" fill="currentColor" class="bi bi-arrow-bar-left" viewBox="0 0 16 16">
@@ -54,8 +54,26 @@
     </div>
 
     <div class="" style="margin: 5px;">
-        <?php libera();?>
+        <?php libera();liberaU()?>
     </div>
+    
+    <!-- para pesquisa ajax -->
+    <script type="text/javascript" src="Javascript/AJAX.js"></script>
+        <div class="container" id="Container">
+            <h1>Pesquisa de Produtos utilizando AJAX</h1>
+            <hr/>
+            <h2>Pesquisar Produtos:</h2>
+            <div id="Pesquisar">
+                Infome o nome:
+                <input class="form-control" type="text" name="descricao" id="descricao"/>
+                <input type="button" class="btn btn-info" name="btnPesquisar" value="Pesquisar" onclick="getDados();"/>
+                <a href="index.php">limpar pesquisa</a>
+            </div>
+            <hr/>
+            <div id="Resultado">
+
+            </div>
+        </div>
 
     
     <!-- script para efeitos e ações (modal) -->

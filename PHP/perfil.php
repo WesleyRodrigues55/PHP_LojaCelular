@@ -4,10 +4,7 @@
 
     $id = $_GET['id'];
 
-    $consulta = "SELECT * FROM usuario WHERE ID = '$id'";
-
-    //variavel que trata a consulta ou retorna um erro
-    $con = @mysqli_query($conexao, $consulta);
+    $sql = @mysqli_query($conexao, "SELECT * FROM usuario WHERE ID ='$id'");
 ?>
 
 <!-- Inicio html -->
@@ -39,7 +36,7 @@
             <td>Ações</td>
         </tr>
         <!-- começando a lista de usuarios da tabela usuario -->
-        <?php while($dado = $con->fetch_array()) { ?>
+        <?php while($dado = $sql->fetch_array()) { ?>
         <tr>
             <td><?php echo $dado['NOME'];?></td>
             <td><?php echo $dado['SENHA'];?></td>

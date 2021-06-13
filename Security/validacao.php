@@ -4,7 +4,12 @@
 
   // Verifica se houve POST e se o usuário ou a senha é(são) vazio(s)
   if (!empty($_POST) AND (empty($_POST['usuario']) OR empty($_POST['senha']))) {
-      header("Location: login.php"); exit;
+      // header("Location: login.php");
+      echo '<script> 
+              alert("sessão inválida"); 
+              window.location = "login.php"
+            </script>'; 
+      exit;
   }
 
   //recebe dados em post
