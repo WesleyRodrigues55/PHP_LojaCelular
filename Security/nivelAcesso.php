@@ -16,6 +16,14 @@ function permissaoGeral(){
       exit;
   }
 }
+//AQUI!
+function liberaU(){
+  $libera_acoesU = 1;
+  if (($_SESSION['UsuarioNivel'] == $libera_acoesU)) {
+    //botão de perfil
+    echo'<a href="PHP/perfil.php? <?php  echo $recebeIdUsuario;?>"><button class="btn btn-primary" style="margin: 5px">Perfil</button></a>';
+  }
+}
 
 function permissaoAdm(){
     // A sessão precisa ser iniciada em cada página diferente
@@ -50,6 +58,7 @@ function permissaoAdm(){
 
       //carrossel
       echo'<a href="PHP/carrosselLista.php?pesquisar="><button class="btn btn-primary" style="margin: 5px">Carrossel</button></a>';
+      
     }
   }
 
