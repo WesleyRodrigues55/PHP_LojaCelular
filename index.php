@@ -17,7 +17,7 @@
 <body>
     <!-- navegação do site -->
     <div class="container-fluid d-flex align-items-center justify-content-center user">
-        <!-- recebendo dados do logiun do usuario -->
+        <!-- recebendo dadoss do logiun do usuario -->
         <!-- <p style="color: white; font-size: 25px; margin: 0 20px"></p> -->
         <!-- botões de ações do usuário -->
         <!-- botão logout -->
@@ -66,7 +66,7 @@
             <div id="Pesquisar">
                 Infome o nome:
                 <input class="form-control" type="text" name="descricao" id="descricao"/>
-                <input type="button" class="btn btn-info" name="btnPesquisar" value="Pesquisar" onclick="getDados();"/>
+                <input type="button" class="btn btn-info" name="btnPesquisar" value="Pesquisar" onclick="getdadoss();"/>
                 <a href="index.php">limpar pesquisa</a>
             </div>
             <hr/>
@@ -75,26 +75,25 @@
             </div>
         </div>
 
-    <!-- dados php para produtos -->
+    <!-- dadoss php para produtos -->
     <?php 
-        $consultaPesquisaProduto = "SELECT * FROM produto";
-        $conRecebePesquisaProduto = @mysqli_query($conexao, $consulta);
+        $conRecebePesquisaProduto = @mysqli_query($conexao, "SELECT * FROM produto");
     ?>
     <div class="container">
         <div class="row">
             <?php while($dados = $conRecebePesquisaProduto->fetch_array()) { ?>
                 <div class="col-md-4">
-                    <h1><?php echo $dado['ID'];?></h1>
-                    <h1><?php echo $dado['DESCRICAO'];?></h1>
-                    <h1><?php echo $dado['MARCA'];?></h1>
-                    <h1><?php echo $dado['PRECO'];?></h1>
-                    <h1><?php echo $dado['IMG'];?></h1>
-                    <h1><?php echo $dado['COR'];?></h1>
-                    <h1><?php echo $dado['ARMAZENAMENTO'];?></h1>
-                    <h1><?php echo $dado['RAM'];?></h1>
-                    <h1><?php echo $dado['TELA'];?></h1>
-                    <h1><?php echo $dado['PESO'];?></h1>
-                    <h1><?php echo $dado['QUALIDADE'];?></h1>
+                    <h1><?php echo $dados['ID'];?></h1>
+                    <h1><?php echo $dados['DESCRICAO'];?></h1>
+                    <h1><?php echo $dados['MARCA'];?></h1>
+                    <h1><?php echo $dados['PRECO'];?></h1>
+                    <h1><?php echo $dados['IMG'];?></h1>
+                    <h1><?php echo $dados['COR'];?></h1>
+                    <h1><?php echo $dados['ARMAZENAMENTO'];?></h1>
+                    <h1><?php echo $dados['RAM'];?></h1>
+                    <h1><?php echo $dados['TELA'];?></h1>
+                    <h1><?php echo $dados['PESO'];?></h1>
+                    <h1><?php echo $dados['QUALIDADE'];?></h1>
                 </div>
             <?php } ?>
         </div>
