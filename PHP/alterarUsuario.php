@@ -48,11 +48,21 @@
         <h3>CPF</h3>
         <input type="text" name="cpf" value='<?php echo $dados['CPF']; ?>'>
 
-        <h3>Nível</h3>
-        <input type="number" name="nivel" value='<?php echo $dados['NIVEL']; ?>'>
+        <div class="form-group">
+        <label for="perfil"><h3>Perfil:</h3></label>
+            <select class="form-control input-lg" name="nivel" value='<?php echo $dados['NIVEL']; ?>'>
+                <option value="2">Administrador</option>
+                <option value="1">Usuário</option>
+            </select>
+        </div>
 
-        <h3>Status</h3>
-        <input type="number" name="status" value='<?php echo $dados['ATIVO']; ?>'>
+        <div class="form-group">
+        <label for="status"><h3>Status</h3></label>
+            <select class="form-control input-lg" name="status"  value='<?php echo $dados['ATIVO']; ?>'>
+                <option value="1">Ativo</option>
+                <option value="0">Inativo</option>
+            </select>
+         </div>
 
         <br><br>
         <button type="submit" name="send">Alterar</button>

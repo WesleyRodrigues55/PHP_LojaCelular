@@ -77,12 +77,11 @@
 
     <!-- dados php para produtos -->
     <?php 
-        $consultaPesquisaProduto = "SELECT * FROM produto";
-        $conRecebePesquisaProduto = @mysqli_query($conexao, $consulta);
+        $conRecebePesquisaProduto = @mysqli_query($conexao, "SELECT * FROM produto");
     ?>
     <div class="container">
         <div class="row">
-            <?php while($dados = $conRecebePesquisaProduto->fetch_array()) { ?>
+            <?php while($dado = $conRecebePesquisaProduto->fetch_array()) { ?>
                 <div class="col-md-4">
                     <h1><?php echo $dado['ID'];?></h1>
                     <h1><?php echo $dado['DESCRICAO'];?></h1>

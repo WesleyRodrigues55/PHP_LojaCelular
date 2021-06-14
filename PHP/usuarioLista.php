@@ -48,8 +48,8 @@
             <td style="padding: 15px;">Nome</td>
             <td style="padding: 15px;">Senha</td>
             <td style="padding: 15px;">CPF</td>
-            <td style="padding: 15px;">Nível</td>
-            <td style="padding: 15px;">Ativo</td>
+            <td style="padding: 15px;">Perfil</td>
+            <td style="padding: 15px;">Status</td>
             <td style="padding: 15px;">Imagem</td>
             <td>Ações</td>
         </tr>
