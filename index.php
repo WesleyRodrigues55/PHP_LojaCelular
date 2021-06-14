@@ -75,6 +75,31 @@
             </div>
         </div>
 
+    <!-- dados php para produtos -->
+    <?php 
+        $consultaPesquisaProduto = "SELECT * FROM produto";
+        $conRecebePesquisaProduto = @mysqli_query($conexao, $consulta);
+    ?>
+    <div class="container">
+        <div class="row">
+            <?php while($dados = $conRecebePesquisaProduto->fetch_array()) { ?>
+                <div class="col-md-4">
+                    <h1><?php echo $dado['ID'];?></h1>
+                    <h1><?php echo $dado['DESCRICAO'];?></h1>
+                    <h1><?php echo $dado['MARCA'];?></h1>
+                    <h1><?php echo $dado['PRECO'];?></h1>
+                    <h1><?php echo $dado['IMG'];?></h1>
+                    <h1><?php echo $dado['COR'];?></h1>
+                    <h1><?php echo $dado['ARMAZENAMENTO'];?></h1>
+                    <h1><?php echo $dado['RAM'];?></h1>
+                    <h1><?php echo $dado['TELA'];?></h1>
+                    <h1><?php echo $dado['PESO'];?></h1>
+                    <h1><?php echo $dado['QUALIDADE'];?></h1>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+
     
     <!-- script para efeitos e ações (modal) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
