@@ -21,11 +21,10 @@
                     <div class="box-info">
                         <h1>LOGO</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, commodi?</p>
-                        <h3>galeria de celulares amostra</h3>
                         <div class="gallery row" style="padding: 30px 0;">
-                            <div class="col-md-12">
-                                <img src="../IMG/note10128GB.png" style="width: 150px;">
-                            </div>
+                        <div class="col-md-12">
+                            <?php include("../PHP/carrossel.php"); ?>
+                        </div>
                         </div>
                     </div>
                 </div>

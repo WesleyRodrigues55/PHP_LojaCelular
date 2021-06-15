@@ -46,19 +46,19 @@
         }
 
         /* para input type="file" */
-        input[type="file"] {
+        /* input[type="file"] {
         display: none;
         }
             
         .upfile {
-        padding: 10px 20px;
-        background-color: #2c42a1;
-        color: white;
-        text-transform: uppercase;
-        text-align: center;
-        margin-top: 10px;
-        cursor: pointer;
-        }
+            padding: 10px 20px;
+            background-color: #2c42a1;
+            color: white;
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: 10px;
+            cursor: pointer;
+        } */
     </style>
 </head>
 <body>
@@ -314,12 +314,12 @@
                                                     <input class="form-control" type="number" name="id" value='<?php echo $dadosA['ID']; ?>' readonly>
                                                 </div>
                                                 <div class="col-12 col-md-12">
-                                                    <label for="img" class="upfile" title="clique aqui para adicionar uma imagem ao produto.">
+                                                    <label title="clique aqui para adicionar uma imagem ao produto.">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-file-earmark-image" viewBox="0 0 16 16">
                                                     <path d="M6.502 7a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
                                                     <path d="M14 14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5V14zM4 1a1 1 0 0 0-1 1v10l2.224-2.224a.5.5 0 0 1 .61-.075L8 11l2.157-3.02a.5.5 0 0 1 .76-.063L13 10V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4z"/>
                                                     </svg>Subir imagem do produto</label>
-                                                    <input type="file" name="img" id="img">
+                                                    <input type="file" name="img">
                                                 </div>
                                                 <div class="col-md-12">
                                                     <button class="btn-block button" type="submit" name="send">Alterar foto</button>

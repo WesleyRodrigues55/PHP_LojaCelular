@@ -56,6 +56,10 @@
     <div class="" style="margin: 5px;">
         <?php libera();liberaU()?>
     </div>
+
+    <!-- <div class="">
+        <//?php include("PHP/carrossel.php"); ?>
+    </div> -->
     
     <!-- para pesquisa ajax -->
     <script type="text/javascript" src="Javascript/AJAX.js"></script>
@@ -83,17 +87,23 @@
         <div class="row">
             <?php while($dado = $conRecebePesquisaProduto->fetch_array()) { ?>
                 <div class="col-md-4">
-                    <h1><?php echo $dado['ID'];?></h1>
-                    <h1><?php echo $dado['DESCRICAO'];?></h1>
-                    <h1><?php echo $dado['MARCA'];?></h1>
-                    <h1><?php echo $dado['PRECO'];?></h1>
-                    <h1><?php echo $dado['IMG'];?></h1>
-                    <h1><?php echo $dado['COR'];?></h1>
-                    <h1><?php echo $dado['ARMAZENAMENTO'];?></h1>
-                    <h1><?php echo $dado['RAM'];?></h1>
-                    <h1><?php echo $dado['TELA'];?></h1>
-                    <h1><?php echo $dado['PESO'];?></h1>
-                    <h1><?php echo $dado['QUALIDADE'];?></h1>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h1><?php echo $dado['ID'];?></h1>
+                            <img src="IMG/imgProduto/<?php echo $dado['IMG'];?>" style="width: 100%;">
+                        </div>
+                        <div class="col-md-6">
+                            <h1><?php echo $dado['DESCRICAO'];?></h1>
+                            <h1><?php echo $dado['MARCA'];?></h1>
+                            <h1><?php echo $dado['PRECO'];?></h1>
+                            <h1><?php echo $dado['COR'];?></h1>
+                            <h1><?php echo $dado['ARMAZENAMENTO'];?></h1>
+                            <h1><?php echo $dado['RAM'];?></h1>
+                            <h1><?php echo $dado['TELA'];?></h1>
+                            <h1><?php echo $dado['PESO'];?></h1>
+                            <h1><?php echo $dado['QUALIDADE'];?></h1>
+                        </div>
+                    </div>
                 </div>
             <?php } ?>
         </div>
