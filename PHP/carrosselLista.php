@@ -83,118 +83,118 @@
                     <button class="btn btn-info" data-toggle="modal" data-target="#idmodalAlterar<?php echo $dado['ID']; ?>">Alterar</button>
                     <!-- inicio modal de alteração de produto -->
                     <div class="modal fade" id="idmodalAlterar<?php echo $dado['ID']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content" id="modal-color">
-                                    <!-- Aqui chama o título do modal -->
-                                    <div class="modal-header">
-                                        <h3 class="modal-title" id="exampleModalLongTitle">Dados para alteração!</h3>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <!-- Aqui chama o Body dele (conteúdo) -->
-                                    <div class="modal-body" style="text-align: left" style="padding: 30px">
-                                        <?php 
-                                            $ID = $dado['ID'];
-                                            $resultadoA = @mysqli_query($conexao, "SELECT * FROM carrossel WHERE ID = '$ID'");
-
-                                            if (!$resultadoA) {
-                                                die('Query inválida: ' . @mysqli_error($conexao));
-                                            } else {
-                                                $numA = @mysqli_num_rows($resultadoA);
-                                                if ($numA == 0) {
-                                                    echo "ID: Não localizado!" . '<br><br>';
-                                                    echo '<input type="button" onclick="window.location' . "'produtoLista.php'" . ';"value="Voltar">';
-                                                } else {
-                                                    $dadosA = mysqli_fetch_array($resultadoA);
-                                                }
-                                            }
-                                        ?>
-                                        <form action="alterarCarrosselCon.php" method="post">
-                                            <div class="row">
-                                                <div class="col-md-2">
-                                                    <label>ID</label>
-                                                    <input class="form-control" type="number" name="id" value='<?php echo $dadosA['ID']; ?>' readonly>
-                                                </div>
-                                                <div class="col-md-12">
-                                                    <label>Descrição</label>
-                                                    <input class="form-control" type="text" name="descricao" value='<?php echo $dadosA['DESCRICAO'] ;?>'>
-                                                </div>
-                                                <div class="col-md-12">
-                                                    <label>Imagem</label>
-                                                    <input class="form-control" type="text" name="img" value='<?php echo $dadosA['IMG'] ;?>'>
-                                                </div>
-                                                <div class="col-md-12">
-                                                    <button class="btn-block button" type="submit" name="send">Alterar</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <!-- <div class="modal-footer">
-                                        <button style="color: black" type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-                                    </div> -->
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content" id="modal-color">
+                                <!-- Aqui chama o título do modal -->
+                                <div class="modal-header">
+                                    <h3 class="modal-title" id="exampleModalLongTitle">Dados para alteração!</h3>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                 </div>
+                                <!-- Aqui chama o Body dele (conteúdo) -->
+                                <div class="modal-body" style="text-align: left" style="padding: 30px">
+                                    <?php 
+                                        $ID = $dado['ID'];
+                                        $resultadoA = @mysqli_query($conexao, "SELECT * FROM carrossel WHERE ID = '$ID'");
+
+                                        if (!$resultadoA) {
+                                            die('Query inválida: ' . @mysqli_error($conexao));
+                                        } else {
+                                            $numA = @mysqli_num_rows($resultadoA);
+                                            if ($numA == 0) {
+                                                echo "ID: Não localizado!" . '<br><br>';
+                                                echo '<input type="button" onclick="window.location' . "'produtoLista.php'" . ';"value="Voltar">';
+                                            } else {
+                                                $dadosA = mysqli_fetch_array($resultadoA);
+                                            }
+                                        }
+                                    ?>
+                                    <form action="alterarCarrosselCon.php" method="post">
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <label>ID</label>
+                                                <input class="form-control" type="number" name="id" value='<?php echo $dadosA['ID']; ?>' readonly>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label>Descrição</label>
+                                                <input class="form-control" type="text" name="descricao" value='<?php echo $dadosA['DESCRICAO'] ;?>'>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label>Imagem</label>
+                                                <input class="form-control" type="text" name="img" value='<?php echo $dadosA['IMG'] ;?>'>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <button class="btn-block button" type="submit" name="send">Alterar</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- <div class="modal-footer">
+                                    <button style="color: black" type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                                </div> -->
                             </div>
                         </div>
-                        <!-- the end modal alterar -->
+                    </div>
+                    <!-- the end modal alterar -->
                     
-                        <button class="btn btn-danger" data-toggle="modal" data-target="#idmodalExcluir<?php echo $dado['ID']; ?>">Excluir</button>
-                        <!-- inicio modal de alteração de produto -->
-                        <div class="modal fade" id="idmodalExcluir<?php echo $dado['ID']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered" role="document">
-                                    <div class="modal-content" id="modal-color">
-                                        <!-- Aqui chama o título do modal -->
-                                        <div class="modal-header">
-                                            <h3 class="modal-title" id="exampleModalLongTitle">Dados para alteração!</h3>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <!-- Aqui chama o Body dele (conteúdo) -->
-                                        <div class="modal-body" style="text-align: left" style="padding: 30px">
-                                            <?php 
-                                                $ID = $dado['ID'];
-                                                $resultadoA = @mysqli_query($conexao, "SELECT * FROM carrossel WHERE ID = '$ID'");
+                    <button class="btn btn-danger" data-toggle="modal" data-target="#idmodalExcluir<?php echo $dado['ID']; ?>">Excluir</button>
+                    <!-- inicio modal de alteração de produto -->
+                    <div class="modal fade" id="idmodalExcluir<?php echo $dado['ID']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content" id="modal-color">
+                                <!-- Aqui chama o título do modal -->
+                                <div class="modal-header">
+                                    <h3 class="modal-title" id="exampleModalLongTitle">Dados para alteração!</h3>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                 </div>
+                                <!-- Aqui chama o Body dele (conteúdo) -->
+                                <div class="modal-body" style="text-align: left" style="padding: 30px">
+                                    <?php 
+                                        $ID = $dado['ID'];
+                                        $resultadoA = @mysqli_query($conexao, "SELECT * FROM carrossel WHERE ID = '$ID'");
 
-                                                if (!$resultadoA) {
-                                                    die('Query inválida: ' . @mysqli_error($conexao));
-                                                } else {
-                                                    $numA = @mysqli_num_rows($resultadoA);
-                                                    if ($numA == 0) {
-                                                        echo "ID: Não localizado!" . '<br><br>';
-                                                        echo '<input type="button" onclick="window.location' . "'produtoLista.php'" . ';"value="Voltar">';
-                                                    } else {
-                                                        $dadosA = mysqli_fetch_array($resultadoA);
-                                                    }
-                                                }
-                                            ?>
-                                            <form action="excluirCarrosselCon.php" method="post">
-                                                <div class="row">
-                                                    <div class="col-md-2">
-                                                        <label>ID</label>
-                                                        <input class="form-control" type="number" name="id" value='<?php echo $dadosA['ID']; ?>' readonly>
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <label>Descrição</label>
-                                                        <input class="form-control" type="text" name="descricao" value='<?php echo $dadosA['DESCRICAO'] ;?>' readonly>
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <label>Imagem</label>
-                                                        <input class="form-control" type="text" name="img" value='<?php echo $dadosA['IMG'] ;?>' readonly>
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <button class="btn-block button" type="submit" name="send">Excluir</button>
-                                                    </div>
-                                                </div>
-                                            </form>
+                                        if (!$resultadoA) {
+                                            die('Query inválida: ' . @mysqli_error($conexao));
+                                        } else {
+                                            $numA = @mysqli_num_rows($resultadoA);
+                                            if ($numA == 0) {
+                                                echo "ID: Não localizado!" . '<br><br>';
+                                                echo '<input type="button" onclick="window.location' . "'produtoLista.php'" . ';"value="Voltar">';
+                                            } else {
+                                                $dadosA = mysqli_fetch_array($resultadoA);
+                                            }
+                                        }
+                                    ?>
+                                    <form action="excluirCarrosselCon.php" method="post">
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <label>ID</label>
+                                                <input class="form-control" type="number" name="id" value='<?php echo $dadosA['ID']; ?>' readonly>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label>Descrição</label>
+                                                <input class="form-control" type="text" name="descricao" value='<?php echo $dadosA['DESCRICAO'] ;?>' readonly>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label>Imagem</label>
+                                                <input class="form-control" type="text" name="img" value='<?php echo $dadosA['IMG'] ;?>' readonly>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <button class="btn-block button" type="submit" name="send">Excluir</button>
+                                            </div>
                                         </div>
-                                        <!-- <div class="modal-footer">
-                                            <button style="color: black" type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-                                        </div> -->
-                                    </div>
+                                    </form>
                                 </div>
+                                <!-- <div class="modal-footer">
+                                    <button style="color: black" type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                                </div> -->
                             </div>
-                            <!-- the end modal alterar -->
+                        </div>
+                    </div>
+                    <!-- the end modal alterar -->
                 </td>
             </tr>
             <?php } ?>

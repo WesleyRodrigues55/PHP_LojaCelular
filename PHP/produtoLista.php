@@ -44,6 +44,21 @@
             margin-bottom: 10px;
             margin-top: 20px;
         }
+
+        /* para input type="file" */
+        input[type="file"] {
+        display: none;
+        }
+            
+        .upfile {
+        padding: 10px 20px;
+        background-color: #2c42a1;
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 10px;
+        cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -81,6 +96,7 @@
 
                     <td>
                         <button class="btn btn-info" data-toggle="modal" data-target="#idmodalAlterar<?php echo $dado['ID']; ?>">
+                        <!-- inicio modal de cadastro de usuário -->
                         Alterar</button>
                         <!-- inicio modal de alteração de produto -->
                         <div class="modal fade" id="idmodalAlterar<?php echo $dado['ID']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -245,6 +261,68 @@
                                                 </div>
                                                 <div class="col-md-12">
                                                     <button class="btn-block button" type="submit" name="send">Excluir</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- <div class="modal-footer">
+                                        <button style="color: black" type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- the end modal -->
+
+                        <button class="btn btn-success" data-toggle="modal" data-target="#idmodalFoto<?php echo $dado['ID']; ?>">
+                        Alterar foto</button>
+                        <!-- inicio modal de cadastro de usuário -->
+                        <div class="modal fade" id="idmodalFoto<?php echo $dado['ID']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content" id="modal-color">
+                                    <!-- Aqui chama o título do modal -->
+                                    <div class="modal-header">
+                                        <h3 class="modal-title" id="exampleModalLongTitle">Dados para alteração de foto!</h3>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <!-- Aqui chama o Body dele (conteúdo) -->
+                                    <div class="modal-body" style="text-align: left" style="padding: 30px">
+                                        <?php
+                                            $ID = $dado['ID'];
+                                            //selecionando o usuario com o id fornecido
+                                            $selectF = "SELECT * FROM produto WHERE ID = '$ID'";
+
+                                            $resultadoF = @mysqli_query($conexao, $selectF);
+
+                                            if (!$resultadoF) {
+                                                die('Query inválida: ' . @mysqli_error($conexao));
+                                            } else {
+                                                $numF = @mysqli_num_rows($resultadoF);
+                                                if ($numF == 0) {
+                                                    echo "ID: Não localizado!" . '<br><br>';
+                                                    echo '<input type="button" onclick="window.location' . "'produtoLista.php'" . ';"value="Voltar">';
+                                                } else {
+                                                    $dadosF = mysqli_fetch_array($resultadoF);
+                                                }
+                                            }
+                                        ?>
+                                        <form action="alterarFotoProdutoCon.php" method="post">
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    <label>ID</label>
+                                                    <input class="form-control" type="number" name="id" value='<?php echo $dadosA['ID']; ?>' readonly>
+                                                </div>
+                                                <div class="col-12 col-md-12">
+                                                    <label for="img" class="upfile" title="clique aqui para adicionar uma imagem ao produto.">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-file-earmark-image" viewBox="0 0 16 16">
+                                                    <path d="M6.502 7a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                                                    <path d="M14 14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5V14zM4 1a1 1 0 0 0-1 1v10l2.224-2.224a.5.5 0 0 1 .61-.075L8 11l2.157-3.02a.5.5 0 0 1 .76-.063L13 10V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4z"/>
+                                                    </svg>Subir imagem do produto</label>
+                                                    <input type="file" name="img" id="img">
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <button class="btn-block button" type="submit" name="send">Alterar foto</button>
                                                 </div>
                                             </div>
                                         </form>

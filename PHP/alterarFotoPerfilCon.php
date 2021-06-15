@@ -4,8 +4,6 @@
 
     //recebendo dados do formulário para alteração
     $id = $_POST['id'];
-    $nome = $_POST['nome'];
-    $cpf = $_POST['cpf'];
     $img = $_POST['img'];
 
     //fazendo o update no banco na tabela usuário
