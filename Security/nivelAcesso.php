@@ -1,6 +1,6 @@
 
 <?php
-//libera ações para Geral
+//libera ações para Geral na index
 function permissaoGeral(){
   // A sessão precisa ser iniciada em cada página diferente
   if (!isset($_SESSION)) session_start();
@@ -13,6 +13,23 @@ function permissaoGeral(){
     session_destroy();
     // Redireciona o visitante de volta pro login
     header("Location: Security/login.php");
+    exit;
+  }
+}
+
+//libera ações para Geral na navegação que faz retornar (direto) para o login
+function permissaoGeralNav(){
+  // A sessão precisa ser iniciada em cada página diferente
+  if (!isset($_SESSION)) session_start();
+
+  $nivel_necessario = 1;
+
+  // Verifica se não há a variável da sessão que identifica o usuário
+  if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necessario)) {
+    // Destrói a sessão por segurança
+    session_destroy();
+    // Redireciona o visitante de volta pro login
+    header("Location: ../Security/login.php");
     exit;
   }
 }

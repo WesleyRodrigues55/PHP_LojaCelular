@@ -14,12 +14,15 @@ body {
 /* navegação */
 
 .nav {
-    background-color: #2c42a1;
+    background-color: #b6bfe4;
+    width: 100%;
+    z-index: 999;
+    top: 0px;
+    left: 0px;
 }
 
 .nav .logo {
-    color: white;
-    font-size: 50px;
+    padding: 30px 0px;
 }
 
 .nav .items {

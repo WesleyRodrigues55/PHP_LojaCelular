@@ -64,7 +64,7 @@
 <body>
     <!-- chama nossa navegação -->
     <?php include("navegacao.php"); ?>
-    <section class="container">
+    <section class="container" style="overflow-x: hidden;">
         <h1>Lista de Produtos</h1>
         <!-- caixa de pesquisa -->
         <form action="produtoLista.php" method="get">
