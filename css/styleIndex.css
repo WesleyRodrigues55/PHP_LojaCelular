@@ -1,0 +1,54 @@
+/* CONTEUDO LISTA CELULARES */
+
+.content-list .content-start {
+    padding: 0px;
+}
+
+.content-list .content-start .box-content {
+    /* border: 1px solid rgba(0, 0, 0, 0.2); */
+    margin: 1px;
+    height: 480px;
+}
+
+.content-list .content-start .box-content .content-img {
+    padding: 10px;
+    text-align: center;
+}
+
+.content-list .content-start .box-content .content-img>img {
+    width: 220px;
+    height: 270px;
+}
+
+.content-list .content-start .box-content .content-info {
+    padding: 10px 25px;
+    text-align: left;
+    height: 100px
+}
+
+.content-list .content-start .box-content .content-button {
+    margin-top: 17px;
+}
+
+
+/* TIPOGRAFIA */
+
+@font-face {
+    font-family: 'Teko-Light';
+    src: url('../fonts/Teko-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.body {
+    font-family: "Teko-Bold";
+}
+
+.content-list .best {
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.content-list .content-start .box-content .content-info>h4 {
+    font-weight: bold;
+}

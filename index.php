@@ -11,10 +11,11 @@
     <title>Página inicial</title>
     <!-- css -->
     <link rel="stylesheet" href="css/styleNavegacao.css">
+    <link rel="stylesheet" href="css/styleIndex.css">
     <!-- bootstrap -->
     <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
 </head>
-<body>
+<body class="body">
     <!-- navegação do site -->
     <div class="container-fluid d-flex align-items-center justify-content-center user">
         <!-- recebendo dados do logiun do usuario -->
@@ -83,31 +84,43 @@
     <?php 
         $conRecebePesquisaProduto = @mysqli_query($conexao, "SELECT * FROM produto");
     ?>
-    <div class="container">
+    <section class="content-list container-fluid" style="width: 98%;">
+        <h1 class="best">Melhores no mercado</h1>
         <div class="row">
             <?php while($dado = $conRecebePesquisaProduto->fetch_array()) { ?>
-                <div class="col-md-4">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h1><?php echo $dado['ID'];?></h1>
-                            <img src="IMG/imgProduto/<?php echo $dado['IMG'];?>" style="width: 100%;">
+                <div class="col-md-2 content-start">
+                    <div class=" bg-light box-content">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="content-img">
+                                    <h1 style="display: none"><?php echo $dado['ID'];?></h1>
+                                    <img src="IMG/imgProduto/<?php echo $dado['IMG'];?>">
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="content-info">
+                                    <h4>R$ <?php echo $dado['PRECO'];?></h4>
+                                    <p><?php echo $dado['DESCRICAO'];?></p>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="content-button">
+                                        <a href="PHP/produtoClicado.php?idProduto=<?php echo $dado['ID']; ?>">
+                                            <button class="btn btn-block btn-info">
+                                                Visualizar
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <h1><?php echo $dado['DESCRICAO'];?></h1>
-                            <h1><?php echo $dado['MARCA'];?></h1>
-                            <h1><?php echo $dado['PRECO'];?></h1>
-                            <h1><?php echo $dado['COR'];?></h1>
-                            <h1><?php echo $dado['ARMAZENAMENTO'];?></h1>
-                            <h1><?php echo $dado['RAM'];?></h1>
-                            <h1><?php echo $dado['TELA'];?></h1>
-                            <h1><?php echo $dado['PESO'];?></h1>
-                            <h1><?php echo $dado['QUALIDADE'];?></h1>
-                        </div>
+                        <!-- fim row -->
                     </div>
                 </div>
             <?php } ?>
         </div>
-    </div>
+        <!-- fim row -->
+    </section>
 
     
     <!-- script para efeitos e ações (modal) -->

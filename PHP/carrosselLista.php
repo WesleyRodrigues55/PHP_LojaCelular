@@ -122,7 +122,7 @@
                                             </div>
                                             <div class="col-md-12">
                                                 <label>Imagem</label>
-                                                <input class="form-control" type="text" name="img" value='<?php echo $dadosA['IMG'] ;?>'>
+                                                <input type="file" name="img" value='<?php echo $dadosA['IMG'] ;?>'>
                                             </div>
                                             <div class="col-md-12">
                                                 <button class="btn-block button" type="submit" name="send">Alterar</button>
