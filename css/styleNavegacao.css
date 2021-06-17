@@ -14,32 +14,43 @@ body {
 /* navegação */
 
 .nav {
-    background-color: #b6bfe4;
+    background: #192765;
     width: 100%;
-    z-index: 999;
-    top: 0px;
-    left: 0px;
+    height: 120px;
 }
 
-.nav .logo {
-    padding: 30px 0px;
-}
+.nav .logo {}
 
-.nav .items {
-    list-style: none;
-}
-
-.nav .items>a {
-    text-decoration: none;
+.nav .logo>h1 {
+    font-weight: bold;
     color: white;
+}
+
+.nav .items-nav {
+    background: #192765;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav .items-nav .list-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav .items-nav .list-nav>li {
+    margin: 0 20px;
     font-size: 20px;
     font-weight: bold;
 }
 
-.nav .items .items-nav {
-    margin: 5px 30px;
-    background-color: #2e46ad;
-    padding: 10px 30px;
+.nav .items-nav .list-nav>li>a {
+    color: white;
+}
+
+.nav .items-nav .list-nav>li>a>img {
+    width: 50px;
+    border-radius: 100px;
 }
 
 

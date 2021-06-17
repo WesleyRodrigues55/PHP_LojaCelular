@@ -1,3 +1,7 @@
+<?php
+    include("../Security/nivelAcesso.php");
+    permissaoGeralNav();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,24 +9,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página inicial</title>
     <!-- css -->
-    <link rel="stylesheet" href="../css/styleNavegacao.css">
+    <!-- <link rel="stylesheet" href="../css/styleNavegacao.css"> -->
     <!-- bootstrap -->
     <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg sticky-top nav">
-        <h1 class="navbar-brand logo">LOGO</h1>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" style="color: white" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-        </svg></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown"> 
-            <ul class="ml-auto p-2 d-flex justify-content-between items">
-                <a href="../index.php"><li class="items-nav">Home</li></a>
-                <a href="#"><li class="items-nav">Celulares</li></a>
-                <a href="#"><li class="items-nav">Sobre</li></a>
-            </ul>
+    <!-- navegação do site -->
+    <nav class="navbar navbar-expand-lg navbar-light nav">
+        <div class="container">
+            <!-- LOGO -->
+            <a class="navbar-brand logo" href="#"><h1>LOGO</h1></a>
+
+            <!-- BUTTON BURGER -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- CONTENT NAVIGATION -->
+            <div class="collapse navbar-collapse items-nav" id="navbarNav">
+                <ul class="navbar-nav list-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Nossos produtos</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
     <div class="categorizando">

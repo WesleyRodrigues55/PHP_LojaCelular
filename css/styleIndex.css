@@ -1,52 +1,103 @@
 /* CONTEUDO LISTA CELULARES */
 
+@charset "utf-8";
+.content-list {
+    margin: 40px 0px;
+}
+
+
+/* .content-list .content-click {
+    text-decoration: none;
+    color: black;
+} */
+
 .content-list .content-start {
     padding: 0px;
 }
 
 .content-list .content-start .box-content {
     /* border: 1px solid rgba(0, 0, 0, 0.2); */
-    margin: 1px;
-    height: 480px;
-}
-
-.content-list .content-start .box-content .content-img {
-    padding: 10px;
+    margin: 2px;
+    height: 440px;
+    padding: 0 10px;
     text-align: center;
 }
 
+.content-list .content-start .box-content .content-img {
+    padding: 10px 0px;
+    overflow: hidden;
+    /* text-align: center; */
+    border: 1px solid red;
+}
+
 .content-list .content-start .box-content .content-img>img {
-    width: 220px;
-    height: 270px;
+    width: 200px;
+    height: 250px;
 }
 
 .content-list .content-start .box-content .content-info {
-    padding: 10px 25px;
+    padding: 10px 15px;
     text-align: left;
-    height: 100px
+    height: 70px;
+    border: 1px solid red;
+}
+
+.content-list .content-start .box-content .content-info>p {
+    text-overflow: ellipsis;
+    /* Required for text-overflow to do anything */
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .content-list .content-start .box-content .content-button {
     margin-top: 17px;
+    border: 1px solid red;
+}
+
+
+/* SESSÃO DE LIBERAÇÃO DE AMD */
+
+.content-adm {
+    text-align: center;
+    padding: 20px 0px;
+}
+
+
+/* SESSÃO DE ICONES / LOGO / CELULARES */
+
+.content-icons {
+    /* text-align: center; */
+    margin: 40px 0px;
+}
+
+.content-icons .icons {
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.content-icons .icons-link .img-icon {
+    width: 144px;
 }
 
 
 /* TIPOGRAFIA */
 
 @font-face {
-    font-family: 'Teko-Light';
-    src: url('../fonts/Teko-Bold.ttf');
+    font-family: 'Medium';
+    src: url('../fonts/Arimo/Arimo-Medium.ttf');
     font-weight: normal;
     font-style: normal;
 }
 
 .body {
-    font-family: "Teko-Bold";
+    font-family: "Medium";
 }
 
-.content-list .best {
+.best {
     font-weight: bold;
-    font-size: 50px;
+    /* font-size: 50px; */
 }
 
 .content-list .content-start .box-content .content-info>h4 {
