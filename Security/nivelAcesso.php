@@ -47,6 +47,19 @@ function liberaU(){
   }
 }
 
+//libera ações para o Usuário para a navegação 2
+function liberaUNav2(){
+  $nivel_necessario = 1;
+  
+  //recebe id usuário
+  $UserID = $_SESSION['UsuarioID'];
+
+  if (($_SESSION['UsuarioNivel'] == $nivel_necessario)) {
+    //apenas o conteudo do link (href="") que leva para page perfil
+    echo'perfil.php?id='. $UserID . '';
+  }
+}
+
 //libera ações para o Administrador
 function permissaoAdm(){
   // A sessão precisa ser iniciada em cada página diferente
@@ -62,12 +75,13 @@ function permissaoAdm(){
       exit;
   }
 }
+//-------------------------------------------------------
 //libera ações para o Administrador
 function libera(){
   $libera_acoes = 2;
   if (($_SESSION['UsuarioNivel'] == $libera_acoes)) {
     //botão de cadastro de produto
-    echo'<a href="PHP/cadastroProduto.php"><button class="btn btn-outline-dark button" style="margin: 5px" data-toggle="modal" data-target="#idmodalCadastrar">Cadastrar produto</button></a>';
+    echo'<a href="PHP/cadastroProduto.php"><button class="btn btn-outline-dark button" style="margin: 5px">Cadastrar produto</button></a>';
 
     //lista de produtos
     echo'<a href="PHP/produtoLista.php?pesquisar="><button class="btn btn-outline-dark button" style="margin: 5px">Lista de produtos</button></a>';
@@ -97,11 +111,33 @@ function liberaPerfilAdm(){
   }
 }
 
+//libera ações para o Usuário para a segunda navegação
+function liberaPerfilAdmNav2(){
+  $nivel_necessario = 2;
+  
+  //recebe id usuário
+  $UserID = $_SESSION['UsuarioID'];
+
+  if (($_SESSION['UsuarioNivel'] == $nivel_necessario)) {
+    //apenas o conteudo do link (href="") que leva para page perfil
+    echo'perfil.php?id='. $UserID . '';
+  }
+}
+
 //Passa o ID e fixa ele na index
 function GetId(){
   //recebe id usuário
   $UserID = $_SESSION['UsuarioID'];
   return $UserID;
+}
+
+//Passa o ID e fixa ele na index
+function GetIdInicioVenda(){
+  //recebe id usuário
+  $recebeCompraAberta = $_SESSION['compraAberta'];
+
+  return $recebeCompraAberta;
+  // return $compraAberta;
 }
 
 

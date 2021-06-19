@@ -35,7 +35,23 @@
       $_SESSION['UsuarioNome'] = $resultado['nome'];
       $_SESSION['UsuarioNivel'] = $resultado['nivel'];
 
-      // Redireciona o visitante
-      header("Location: restrito.php"); exit;
+      $recebeIdUser = $_SESSION['UsuarioID'];
+
+      $insertCompraAberta = @mysqli_query($conexao, "INSERT INTO compraaberta VALUES(0, '$recebeIdUser', now())");
+
+      $maxID = @mysqli_query($conexao, "SELECT max(ID) as ID FROM compraaberta");
+
+      $dadosCompraAberta = mysqli_fetch_array($maxID);
+      $recebeMaxID = $dadosCompraAberta['ID'];
+
+      //armazena na sessão o ID da compra aberta
+      $_SESSION['compraAberta'] = $dadosCompraAberta['ID'];
+
+      if(!$insertCompraAberta){
+        die('Queri inválida: ' . @mysqli_error($conexao));
+      } else {
+        // Redireciona o visitante
+        header("Location: restrito.php"); exit;
+      }
   }
   ?>

@@ -59,9 +59,11 @@
                             <div class="col-md-12">
                                 <h1>Preço:</h1>
                                 <h1>R$ <span class=""><?php echo $listaProduto['PRECO'];?></span></h1>
-                                <a href="">
+
+                                <?php $recebeIDCompraAberta = GetIdInicioVenda(); $recebeID = GetId();?>
+                                <a href="adicionarProdutoCarrinho.php?IdCompraAberta=<?php echo $recebeIDCompraAberta ?>&IdUsuario=<?php echo $recebeID ?>&IdProduto=<?php echo $listaProduto['ID'] ?>&qtd=1&preco=<?php echo $listaProduto['PRECO']; ?>">
                                     <button class="btn btn-success">
-                                        Comprar
+                                        adicionar ao carrinho
                                     </button>
                                 </a>
                             </div>

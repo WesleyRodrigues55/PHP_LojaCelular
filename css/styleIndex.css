@@ -1,6 +1,10 @@
+/* .body {
+    
+} */
+
+
 /* CONTEUDO LISTA CELULARES */
 
-@charset "utf-8";
 .content-list {
     margin: 40px 0px;
 }
@@ -17,17 +21,30 @@
 
 .content-list .content-start .box-content {
     /* border: 1px solid rgba(0, 0, 0, 0.2); */
-    margin: 2px;
-    height: 440px;
+    margin: 10px;
+    height: 420px;
     padding: 0 10px;
     text-align: center;
+    background: white;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width:768px) {
+    .content-list .content-start .box-content {
+        /* border: 1px solid rgba(0, 0, 0, 0.2); */
+        margin: 10px;
+        height: 440px;
+        padding: 0 10px;
+        text-align: center;
+        background: white;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+    }
 }
 
 .content-list .content-start .box-content .content-img {
     padding: 10px 0px;
     overflow: hidden;
     /* text-align: center; */
-    border: 1px solid red;
 }
 
 .content-list .content-start .box-content .content-img>img {
@@ -39,19 +56,14 @@
     padding: 10px 15px;
     text-align: left;
     height: 70px;
-    border: 1px solid red;
-}
-
-.content-list .content-start .box-content .content-info>p {
-    text-overflow: ellipsis;
-    /* Required for text-overflow to do anything */
-    white-space: nowrap;
-    overflow: hidden;
 }
 
 .content-list .content-start .box-content .content-button {
     margin-top: 17px;
-    border: 1px solid red;
+}
+
+.content-list .content-start .box-content .content-button>a {
+    text-decoration: none;
 }
 
 
@@ -75,10 +87,18 @@
     margin: 20px;
     padding: 10px;
     border-radius: 20px;
+    background: white;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
 }
 
 .content-icons .icons-link .img-icon {
     width: 144px;
+}
+
+@media screen and (max-width: 576px) {
+    .content-icons .icons-link .img-icon {
+        width: 74px;
+    }
 }
 
 
@@ -102,4 +122,13 @@
 
 .content-list .content-start .box-content .content-info>h4 {
     font-weight: bold;
+    color: rgb(71, 71, 71);
+}
+
+.content-list .content-start .box-content .content-info>p {
+    text-overflow: ellipsis;
+    /* Required for text-overflow to do anything */
+    white-space: nowrap;
+    overflow: hidden;
+    color: rgb(71, 71, 71);
 }

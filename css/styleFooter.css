@@ -1,0 +1,30 @@
+.footer {
+    background: linear-gradient(white, #1927653f);
+}
+
+.content-fotter {
+    padding: 50px;
+}
+
+.icons-footer {
+    width: 30px;
+    margin: 10px;
+}
+
+
+/* tipografia */
+
+.h1-footer {
+    color: black;
+    font-weight: bold;
+}
+
+.h4-footer {
+    color: black;
+    padding-top: 35px;
+    padding-bottom: 10px;
+}
+
+.p-footer {
+    color: black;
+}
