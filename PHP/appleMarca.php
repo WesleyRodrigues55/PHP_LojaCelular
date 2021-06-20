@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos Xiaomi</title>
+    <title>Produtos Apple</title>
     <!-- css -->
     <link rel="stylesheet" href="../css/styleNavegacao.css">
     <link rel="stylesheet" type="text/css" href="../css/styleMarcas.css">
@@ -19,8 +19,8 @@
 </head>
 <body class="body bg-light">
 
-    <!-- chama nossa navegação -->
-    <?php include("navegacao.php"); ?>
+        <!-- chama nossa navegação -->
+        <?php include("navegacao.php"); ?>
     <section class="content-list container-fluid" style="width: 98%;">
         <h1 class="best">Nossos produtos</h1>
         <hr>

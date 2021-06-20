@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 16-Jun-2021 às 04:36
+-- Tempo de geração: 20-Jun-2021 às 23:18
 -- Versão do servidor: 10.4.13-MariaDB
 -- versão do PHP: 7.4.8
 
@@ -20,6 +20,45 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `banco_cell`
 --
+
+DELIMITER $$
+--
+-- Procedimentos
+--
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Insere` (IN `DESCRICAO` VARCHAR(100), IN `IMG` INT)  BEGIN 
+        INSERT INTO produto VALUES('1', '1',1,'1','1','1','1','1','1','1');
+        INSERT INTO carrossel VALUES ('1', '1');
+    END$$
+
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `carrinho`
+--
+
+CREATE TABLE `carrinho` (
+  `ID` bigint(11) NOT NULL,
+  `ID_COMPRA_ABERTA` bigint(11) NOT NULL,
+  `ID_USUARIO` bigint(11) NOT NULL,
+  `ID_PRODUTO` bigint(11) NOT NULL,
+  `QUANTIDADE` int(11) NOT NULL,
+  `PRECO` decimal(6,2) NOT NULL,
+  `DATETIME` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `carrossel`
+--
+
+CREATE TABLE `carrossel` (
+  `ID` int(11) NOT NULL,
+  `DESCRICAO` varchar(100) NOT NULL,
+  `IMG` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `carrossel`
@@ -38,7 +77,53 @@ INSERT INTO `carrossel` (`ID`, `DESCRICAO`, `IMG`) VALUES
 (18, 'Smartphone Moto Z2 Play Dual Chip Câmera 12MP Android 9.0', 'motoz2play-removebg-preview.png'),
 (19, 'Smartphone Moto G10 Dual Chip Câmera dupla 48MP + 8MP + 2MP + 2MP Android 10.0', 'motog10-removebg-preview.png'),
 (20, 'Smartphone Moto E6 Plus Dual Chip Câmera dupla 13MP Android 9.0', 'motoe6plus-removebg-preview.png'),
-(22, 'Smartphone Moto One Fusion Dual Chip Câmera dupla 48MP + 8MP + 5MP + 2MP Android 10.0', 'motoonefusion-removebg-preview.png');
+(22, 'Smartphone Moto One Fusion Dual Chip Câmera dupla 48MP + 8MP + 5MP + 2MP Android 10.0', 'motoonefusion-removebg-preview.png'),
+(24, '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `compraaberta`
+--
+
+CREATE TABLE `compraaberta` (
+  `ID` bigint(11) NOT NULL,
+  `ID_USUARIO` int(11) NOT NULL,
+  `DATETIME` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `comprafechada`
+--
+
+CREATE TABLE `comprafechada` (
+  `ID` bigint(11) NOT NULL,
+  `ID_COMPRA_ABERTA_CARRINHO` int(11) NOT NULL,
+  `ID_USUARIO` int(11) NOT NULL,
+  `DATETIME` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `produto`
+--
+
+CREATE TABLE `produto` (
+  `ID` int(11) NOT NULL,
+  `DESCRICAO` varchar(100) DEFAULT NULL,
+  `MARCA` varchar(50) DEFAULT NULL,
+  `PRECO` decimal(6,2) DEFAULT NULL,
+  `IMG` varchar(50) DEFAULT NULL,
+  `COR` varchar(50) DEFAULT NULL,
+  `ARMAZENAMENTO` varchar(50) DEFAULT NULL,
+  `RAM` varchar(50) DEFAULT NULL,
+  `TELA` varchar(50) DEFAULT NULL,
+  `PESO` varchar(50) DEFAULT NULL,
+  `QUALIDADE` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `produto`
@@ -59,13 +144,109 @@ INSERT INTO `produto` (`ID`, `DESCRICAO`, `MARCA`, `PRECO`, `IMG`, `COR`, `ARMAZ
 (31, 'Smartphone Moto E6 Plus Dual Chip Câmera dupla 13MP Android 9.0', 'Motorola', '650.00', 'motoe6plus-removebg-preview.png', 'Azul Netuno', '64gb', '4gb', '6.1\"', '150g', 'Ruim'),
 (33, 'Smartphone Moto One Fusion Dual Chip Câmera dupla 48MP + 8MP + 5MP + 2MP Android 10.0', 'Motorola', '1400.00', 'motoonefusion-removebg-preview.png', 'Azul', '128gb', '4gb', '6.5\"', '400g', 'Excelente');
 
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `usuario`
+--
+
+CREATE TABLE `usuario` (
+  `ID` int(11) NOT NULL,
+  `NOME` varchar(50) DEFAULT NULL,
+  `SENHA` varchar(50) DEFAULT NULL,
+  `CPF` varchar(15) DEFAULT NULL,
+  `NIVEL` int(1) DEFAULT NULL,
+  `IMG` varchar(50) DEFAULT NULL,
+  `ATIVO` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 --
 -- Extraindo dados da tabela `usuario`
 --
 
 INSERT INTO `usuario` (`ID`, `NOME`, `SENHA`, `CPF`, `NIVEL`, `IMG`, `ATIVO`) VALUES
 (17, 'Wesley', '123', '49106275885', 2, 'wesley.jpg', 1),
-(19, 'Usuario', '123', '2222', 1, '', 1);
+(19, 'Usuario', '123', '2222', 1, 'user-profile.jfif', 1);
+
+--
+-- Índices para tabelas despejadas
+--
+
+--
+-- Índices para tabela `carrinho`
+--
+ALTER TABLE `carrinho`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Índices para tabela `carrossel`
+--
+ALTER TABLE `carrossel`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Índices para tabela `compraaberta`
+--
+ALTER TABLE `compraaberta`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Índices para tabela `comprafechada`
+--
+ALTER TABLE `comprafechada`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Índices para tabela `produto`
+--
+ALTER TABLE `produto`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Índices para tabela `usuario`
+--
+ALTER TABLE `usuario`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- AUTO_INCREMENT de tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `carrinho`
+--
+ALTER TABLE `carrinho`
+  MODIFY `ID` bigint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
+
+--
+-- AUTO_INCREMENT de tabela `carrossel`
+--
+ALTER TABLE `carrossel`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
+--
+-- AUTO_INCREMENT de tabela `compraaberta`
+--
+ALTER TABLE `compraaberta`
+  MODIFY `ID` bigint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+
+--
+-- AUTO_INCREMENT de tabela `comprafechada`
+--
+ALTER TABLE `comprafechada`
+  MODIFY `ID` bigint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+
+--
+-- AUTO_INCREMENT de tabela `produto`
+--
+ALTER TABLE `produto`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
+--
+-- AUTO_INCREMENT de tabela `usuario`
+--
+ALTER TABLE `usuario`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -8,7 +8,7 @@
     <!-- bootstrpa -->
     <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
 </head>
-<body>
+<body class="body">
     <a href="../Security/login.php">Cadastro realizado com sucesso, clique aqui para fazer login e iniciar a sessão</a>
 </body>
 </html>

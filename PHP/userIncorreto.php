@@ -52,9 +52,20 @@
             width: 170px;
             height: 170px;
         }
+
+        @font-face {
+            font-family: 'Medium';
+            src: url('../fonts/Arimo/Arimo-Medium.ttf');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .body {
+            font-family: "Medium";
+        }
     </style>
 </head>
-<body>
+<body class="body">
     <nav class="nav">
         <div class="content">
             <h3>Usuário ou senha incorretos, clique no ícone abaixo para resgatar seu login</h3>

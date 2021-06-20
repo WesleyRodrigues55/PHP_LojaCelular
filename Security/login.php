@@ -19,12 +19,12 @@
             <div class="row boxs">
                 <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
                     <div class="box-info">
-                        <h1>LOGO</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, commodi?</p>
+                        <img src="../IMG/icons/logoblack-removebg-preview.png" style="width: 100%;">
+                        <p>Garanta hoje mesmo um celular novinho e de alta qualidade, temos várias marcas ao seus dispor.</p>
                         <div class="gallery row" style="padding: 30px 0;">
-                        <div class="col-md-12">
-                            <?php include("../PHP/carrossel.php"); ?>
-                        </div>
+                            <div class="col-md-12">
+                                <?php include("../PHP/carrossel.php"); ?>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -66,7 +66,7 @@
                     </div>
                     <!-- Aqui chama o Body dele (conteúdo) -->
                     <div class="modal-body" style="text-align: left" style="padding: 30px">
-                        <?php include("../ModalsPHP/modalCadastrar.php");?>
+                        <?php include("../PHP/modalCadastrar.php");?>
                     </div>
                     <!-- <div class="modal-footer">
                         <button style="color: black" type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>

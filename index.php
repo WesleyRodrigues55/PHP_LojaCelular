@@ -1,3 +1,4 @@
+<!-- DADOS DE INCLUDE E GETs -->
 <?php
     include("Security/conexaoBanco.php");
     include("Security/nivelAcesso.php");
@@ -19,11 +20,12 @@
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="css/styleNavegacao.css">
     <link rel="stylesheet" type="text/css" href="css/styleIndex.css">
+    <link rel="stylesheet" type="text/css" href="css/styleFooter.css">
     <!-- bootstrap -->
     <link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.min.css">
 </head>
 <body class="body bg-light">
-    <!-- navegação do site -->
+    <!-- NAVBAR DA INDEX -->
     <nav class="navbar navbar-expand-lg nav">
         <div class="container">
             <!-- LOGO -->
@@ -117,7 +119,7 @@
                                             <td><?php echo $ListaCarrinho['DESCRICAO']; ?></td>
                                             <td>R$ <?php echo number_format($ListaCarrinho['PRECO'],2); ?></td>
                                             <!-- <td><//?php echo $ListaCarrinho['DATETIME']; ?></td> -->
-                                            <td><button class="btn btn-outline-danger" onclick="apagar()">Apagar</a></td>
+                                            <td><button class="btn btn-outline-danger" onclick="apagar()">Cancelar</a></td>
                                             <script>
                                                 function apagar(retornaIndex) {
                                                     var confirma = window.confirm("Deseja apagar esse produto de seu carrinho? ");
@@ -159,23 +161,13 @@
                         </div>
                     </div>
                 </div>
-                <!-- the end modal alterar -->
+                <!-- the end modal carrinho -->
             </div>
         </div>
     </nav>
-    <!-- <div class="categorizando">
-        <ul>
-            <li>Mais vendidos</li>
-            <li>Categorias</li>
-            <li>Preço baixo</li>
-            <li>Preço alto</li>
-            <li>Qualidade</li>
-        </ul>
-    </div> -->
 
-    <!-- liberando funções adm -->
+    <!-- LIBERA FUNÇÕS ADM -->
     <section class="container-fluid bg-light content-adm">
-        <h2>Funções Adm</h2>
         <?php libera();?>
     </section>
 
@@ -195,7 +187,7 @@
             <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-3">
                 <div class="icons">
                     <!-- apple -->
-                    <a href="" class="icons-link">
+                    <a href="PHP/appleMarca.php?marca=Apple" class="icons-link">
                         <img class="img-icon" src="IMG/icons/icons8-apple-logo-480.png" title="clique para ver celulares da marca Apple">
                     </a>
                 </div>
@@ -219,10 +211,11 @@
         </div>
     </section>
 
-    <!-- dados php para produtos -->
+    <!-- DADOS PARA O PRODUTO -->
     <?php 
         $conRecebePesquisaProduto = @mysqli_query($conexao, "SELECT * FROM produto");
     ?>
+    <!-- SEÇÃO DOS PRODUTOS -->
     <section class="content-list container-fluid" style="width: 98%;">
         <h1 class="best">Nossos produtos</h1>
         <hr>
@@ -268,9 +261,57 @@
         <!-- fim row -->
     </section>
 
-    <?php include("PHP/footer.php"); ?>
 
-    <!-- script para efeitos e ações (modal) -->
+    <!-- FOOTER DA INDEX -->
+    <footer class="container-fluid relative-bottom footer">
+        <div class="content-fotter">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <h1 class="h1-footer">Quem somos?</h1>
+                    <p class="p-footer">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure hic blanditiis quis soluta aperiam quod itaque, dolorum ex aspernatur, fuga, numquam impedit dolorem? Veritatis impedit blanditiis ad porro voluptates. Repudiandae?</p>
+                    <p class="p-footer">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure hic blanditiis quis soluta aperiam quod itaque, dolorum ex aspernatur, fuga, numquam impedit dolorem? Veritatis impedit blanditiis ad porro voluptates. Repudiandae?</p>
+                    <p class="p-footer">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure hic blanditiis quis soluta aperiam quod itaque, dolorum ex aspernatur, fuga, numquam impedit dolorem? Veritatis impedit blanditiis ad porro voluptates. Repudiandae?</p>
+                </div>
+
+                <!-- <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+
+                </div> -->
+                
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <h1 class="h1-footer">Contate-nos</h1>
+                    <h4 class="h4-footer">Redes sociais:</h4>
+                    <div class="row">
+                        <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                            <img class="icons-footer" src="IMG/icons/facebook.svg">
+                        </div>
+                        <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                            <img class="icons-footer" src="IMG/icons/instagram.svg">
+                        </div>
+                        <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                            <img class="icons-footer" src="IMG/icons/whatsapp.svg">
+                        </div>
+                        <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                            <img class="icons-footer" src="IMG/icons/twitter.svg">
+                        </div>
+                    </div>
+                    <h4 class="h4-footer">Email:</h4>
+                    <div class="row">
+                        <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                            <img class="icons-footer" src="IMG/icons/envelope-fill.svg">
+                        </div>
+                    </div>
+                    <h4 class="h4-footer">Telefone:</h4>
+                    <div class="row">
+                        <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                            <img class="icons-footer" src="IMG/icons/telephone-fill.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CASO NECESSITE USAR JQUERY -->
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script> -->

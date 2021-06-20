@@ -7,10 +7,11 @@
     <title>Document</title>
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="css/styleFooter.css">
+    <link rel="stylesheet" type="text/css" href="../css/styleFooter.css">
     <!-- bootstrap -->
     <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
 </head>
-<body>
+<body class="body">
     <footer class="container-fluid relative-bottom footer">
         <div class="content-fotter">
             <div class="row">
@@ -30,28 +31,28 @@
                     <h4 class="h4-footer">Redes sociais:</h4>
                     <div class="row">
                         <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                            <img class="icons-footer" src="IMG/icons/facebook.svg">
+                            <img class="icons-footer" src="../IMG/icons/facebook.svg">
                         </div>
                         <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                            <img class="icons-footer" src="IMG/icons/instagram.svg">
+                            <img class="icons-footer" src="../IMG/icons/instagram.svg">
                         </div>
                         <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                            <img class="icons-footer" src="IMG/icons/whatsapp.svg">
+                            <img class="icons-footer" src="../IMG/icons/whatsapp.svg">
                         </div>
                         <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                            <img class="icons-footer" src="IMG/icons/twitter.svg">
+                            <img class="icons-footer" src="../IMG/icons/twitter.svg">
                         </div>
                     </div>
                     <h4 class="h4-footer">Email:</h4>
                     <div class="row">
                         <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                            <img class="icons-footer" src="IMG/icons/envelope-fill.svg">
+                            <img class="icons-footer" src="../IMG/icons/envelope-fill.svg">
                         </div>
                     </div>
                     <h4 class="h4-footer">Telefone:</h4>
                     <div class="row">
                         <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                            <img class="icons-footer" src="IMG/icons/telephone-fill.svg">
+                            <img class="icons-footer" src="../IMG/icons/telephone-fill.svg">
                         </div>
                     </div>
                 </div>

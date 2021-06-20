@@ -58,7 +58,7 @@ body,
     .content .content-center .boxs {
         /* responsive */
         margin: 0 200px;
-        padding: 120px 25px;
+        padding: 40px 25px;
         border-radius: 5px;
         /* background: rgba(25, 25, 25, 0.5); */
         background: white;
@@ -150,6 +150,17 @@ body,
 
 
 /* tipografia */
+
+@font-face {
+    font-family: 'Medium';
+    src: url('../fonts/Arimo/Arimo-Medium.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.body {
+    font-family: "Medium";
+}
 
 h1 {
     color: rgb(0, 0, 0);

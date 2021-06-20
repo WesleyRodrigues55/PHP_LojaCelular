@@ -1,0 +1,105 @@
+/* CONTEUDO LISTA CELULARES */
+
+.content-list {
+    margin: 40px 0px;
+}
+
+
+/* .content-list .content-click {
+    text-decoration: none;
+    color: black;
+} */
+
+.content-list .content-start {
+    padding: 0px;
+}
+
+.content-list .content-start .box-content {
+    /* border: 1px solid rgba(0, 0, 0, 0.2); */
+    margin: 10px;
+    height: 420px;
+    padding: 0 10px;
+    text-align: center;
+    background: white;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width:768px) {
+    .content-list .content-start .box-content {
+        /* border: 1px solid rgba(0, 0, 0, 0.2); */
+        margin: 10px;
+        height: 440px;
+        padding: 0 10px;
+        text-align: center;
+        background: white;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+    }
+}
+
+.content-list .content-start .box-content .content-img {
+    padding: 10px 0px;
+    overflow: hidden;
+    /* text-align: center; */
+}
+
+.content-list .content-start .box-content .content-img>img {
+    width: 200px;
+    height: 250px;
+}
+
+.content-list .content-start .box-content .content-info {
+    padding: 10px 15px;
+    text-align: left;
+    height: 70px;
+}
+
+.content-list .content-start .box-content .content-button {
+    margin-top: 17px;
+}
+
+.content-list .content-start .box-content .content-button>a {
+    text-decoration: none;
+}
+
+
+/* tipografia */
+
+h1 {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+h2 {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+h4 {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.info {
+    color: rgb(71, 71, 71);
+}
+
+.p-ponto {
+    text-overflow: ellipsis;
+    /* Required for text-overflow to do anything */
+    white-space: nowrap;
+    overflow: hidden;
+    color: rgb(71, 71, 71);
+}
+
+.pp-header {
+    color: black;
+}
+
+.p-header {
+    font-weight: bold;
+    color: rgb(71, 71, 71);
+}
+
+.p-footer {
+    color: black;
+}

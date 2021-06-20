@@ -45,7 +45,7 @@
         }
     </style>
 </head>
-<body>
+<body class="body">
     <!-- chama nossa navegação -->
     <?php include("navegacao.php"); ?>
 

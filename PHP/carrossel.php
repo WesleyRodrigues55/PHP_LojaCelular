@@ -17,7 +17,7 @@
         // criar HTML para a imagem
         $imagesHtml.= '
         <div class="carousel-item '.$active.' carrossel" style="text-align: center;">
-            <img src="../IMG/imgProduto/'.$filename.'" alt="'.$filename.'" class="animate__slideInRight" style="animation-duration: 1s;margin: 5px; width: 50%"/>
+            <img src="../IMG/imgProduto/'.$filename.'" alt="'.$filename.'" class="animate__slideInRight" style="animation-duration: 1s;margin: 5px; width: 40%"/>
         </div>';
         // criar HTML para o indicador da imagem
         $indicatorDotsHtml.= '
