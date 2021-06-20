@@ -86,6 +86,9 @@
             if ($listaProduto['MARCA'] == 'Motorola') {
                 $marca = "Motorola";
             }
+            if ($listaProduto['MARCA'] == 'Apple') {
+                $marca = "Apple";
+            }
             
             $sql = @mysqli_query($conexao, "SELECT * FROM produto WHERE MARCA = '$marca'");
             

@@ -93,11 +93,13 @@ h4 {
 
 .pp-header {
     color: black;
+    margin-left: 15px;
 }
 
 .p-header {
     font-weight: bold;
     color: rgb(71, 71, 71);
+    margin-left: 1px;
 }
 
 .p-footer {

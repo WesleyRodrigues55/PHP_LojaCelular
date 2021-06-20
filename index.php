@@ -43,7 +43,7 @@
                         <a class="nav-link" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Nossos produtos</a>
+                        <a class="nav-link" href="#prod">Produtos</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav list-nav">
@@ -173,7 +173,7 @@
 
     <!-- SESSÃO DE ICONES MARCAS -->
     <section class="container-fluid content-icons" style="width: 98%;">
-        <h1 class="best">Navegue por marca</h1>
+        <h1 class="best">Marcas parceiras</h1>
         <hr>
         <div class="row">
             <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-3">
@@ -216,8 +216,8 @@
         $conRecebePesquisaProduto = @mysqli_query($conexao, "SELECT * FROM produto");
     ?>
     <!-- SEÇÃO DOS PRODUTOS -->
-    <section class="content-list container-fluid" style="width: 98%;">
-        <h1 class="best">Nossos produtos</h1>
+    <section class="content-list container-fluid" style="width: 98%;" id="prod">
+        <h1 class="best">Produtos</h1>
         <hr>
         <div class="row">
             <?php while($dado = $conRecebePesquisaProduto->fetch_array()) { ?>

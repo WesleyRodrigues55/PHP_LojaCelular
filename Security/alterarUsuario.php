@@ -105,7 +105,7 @@
         $con = @mysqli_query($conexao,"SELECT * FROM usuario WHERE CPF='$CPF'");
     ?>
     <div class="container-fluid content-top">
-        <h3>Insira no campo abaixo seu CPF, para que possamos recupera os dados de sua conta.</h3>
+        <h3>Insira no campo abaixo seu CPF para que possamos recuperar seus dados...</h3>
         <form class="form form-group" action="alterarUsuario.php" post="get">
             <div class="form-group d-flex justify-content-center">
                 <input class="form-control search" placeholder="insira seu CPF aqui." type="search" name="pesquisa" title="insira seu CPF aqui, para pesquisar em nosso banco de dados.">

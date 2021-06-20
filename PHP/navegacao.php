@@ -37,9 +37,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="../index.php">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.php">Nossos produtos</a>
-                    </li>
                 </ul>
                 <ul class="navbar-nav list-nav">
                     <!-- Dropdown -->

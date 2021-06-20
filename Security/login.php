@@ -20,7 +20,7 @@
                 <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
                     <div class="box-info">
                         <img src="../IMG/icons/logoblack-removebg-preview.png" style="width: 100%;">
-                        <p>Garanta hoje mesmo um celular novinho e de alta qualidade, temos várias marcas ao seus dispor.</p>
+                        <p>Garanta hoje mesmo um celular novinho e de alta qualidade, as melhores marcas no seu carrinho!</p>
                         <div class="gallery row" style="padding: 30px 0;">
                             <div class="col-md-12">
                                 <?php include("../PHP/carrossel.php"); ?>
@@ -46,7 +46,7 @@
                         <div class="box-form-submit">
                             <button type="submit" class="btn-block button" title="clique aqui para fazer login!">Sign in</button><br>
                             <!-- button modal -->
-                            <a href="#" class="a-cad" data-toggle="modal" data-target="#idmodalCadastrar" title="clique aqui caso não tenha uma conta e queira se cadastrar!">Não tem uma conta? clique aqui e cadastre-se!</a>
+                            <a href="#" class="a-cad" data-toggle="modal" data-target="#idmodalCadastrar" title="Clique aqui caso não tenha uma conta e queira se cadastrar!">Não tem uma conta? Clique aqui e cadastre-se!</a>
                         </div>
                     </form>
                 </div>
