@@ -16,7 +16,7 @@
 
     <header class="content container-fluid">
         <div class="content-center container-fluid">
-            <div class="row boxs">
+            <div class="row boxs  align-items-center">
                 <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
                     <div class="box-info">
                         <img src="../IMG/icons/logoblack-removebg-preview.png" style="width: 100%;">
