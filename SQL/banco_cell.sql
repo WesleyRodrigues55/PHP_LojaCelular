@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 20-Jun-2021 às 23:18
+-- Tempo de geração: 21/06/2021 às 00:58
 -- Versão do servidor: 10.4.13-MariaDB
--- versão do PHP: 7.4.8
+-- Versão do PHP: 7.4.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -21,21 +21,10 @@ SET time_zone = "+00:00";
 -- Banco de dados: `banco_cell`
 --
 
-DELIMITER $$
---
--- Procedimentos
---
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Insere` (IN `DESCRICAO` VARCHAR(100), IN `IMG` INT)  BEGIN 
-        INSERT INTO produto VALUES('1', '1',1,'1','1','1','1','1','1','1');
-        INSERT INTO carrossel VALUES ('1', '1');
-    END$$
-
-DELIMITER ;
-
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `carrinho`
+-- Estrutura para tabela `carrinho`
 --
 
 CREATE TABLE `carrinho` (
@@ -51,7 +40,7 @@ CREATE TABLE `carrinho` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `carrossel`
+-- Estrutura para tabela `carrossel`
 --
 
 CREATE TABLE `carrossel` (
@@ -61,7 +50,7 @@ CREATE TABLE `carrossel` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `carrossel`
+-- Despejando dados para a tabela `carrossel`
 --
 
 INSERT INTO `carrossel` (`ID`, `DESCRICAO`, `IMG`) VALUES
@@ -78,12 +67,14 @@ INSERT INTO `carrossel` (`ID`, `DESCRICAO`, `IMG`) VALUES
 (19, 'Smartphone Moto G10 Dual Chip Câmera dupla 48MP + 8MP + 2MP + 2MP Android 10.0', 'motog10-removebg-preview.png'),
 (20, 'Smartphone Moto E6 Plus Dual Chip Câmera dupla 13MP Android 9.0', 'motoe6plus-removebg-preview.png'),
 (22, 'Smartphone Moto One Fusion Dual Chip Câmera dupla 48MP + 8MP + 5MP + 2MP Android 10.0', 'motoonefusion-removebg-preview.png'),
-(24, '', '');
+(25, 'Iphone 11 Desbloqueado 12MP IOS 13', 'iphone11-removebg-preview.png'),
+(26, 'Iphone 12 Pro Desbloqueado 12MP IOS 14', 'iphone12pro-removebg-preview.png'),
+(27, 'IPhone 7 Desbloqueado 12MP IOS 13', 'iphone7-removebg-preview.png');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `compraaberta`
+-- Estrutura para tabela `compraaberta`
 --
 
 CREATE TABLE `compraaberta` (
@@ -95,7 +86,7 @@ CREATE TABLE `compraaberta` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `comprafechada`
+-- Estrutura para tabela `comprafechada`
 --
 
 CREATE TABLE `comprafechada` (
@@ -108,7 +99,7 @@ CREATE TABLE `comprafechada` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `produto`
+-- Estrutura para tabela `produto`
 --
 
 CREATE TABLE `produto` (
@@ -126,7 +117,7 @@ CREATE TABLE `produto` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `produto`
+-- Despejando dados para a tabela `produto`
 --
 
 INSERT INTO `produto` (`ID`, `DESCRICAO`, `MARCA`, `PRECO`, `IMG`, `COR`, `ARMAZENAMENTO`, `RAM`, `TELA`, `PESO`, `QUALIDADE`) VALUES
@@ -142,12 +133,15 @@ INSERT INTO `produto` (`ID`, `DESCRICAO`, `MARCA`, `PRECO`, `IMG`, `COR`, `ARMAZ
 (29, 'Smartphone Moto Z2 Play Dual Chip Câmera 12MP Android 9.0', 'Motorola', '1000.00', 'motoz2play-removebg-preview.png', 'Platinum', '64gb', '4gb', '5.5\"', '150g', 'Excelente'),
 (30, 'Smartphone Moto G10 Dual Chip Câmera dupla 48MP + 8MP + 2MP + 2MP Android 10.0', 'Motorola', '1000.00', 'motog10-removebg-preview.png', 'Cinza Aurora', '64gb', '4gb', '6.5\"', '300g', 'Bom'),
 (31, 'Smartphone Moto E6 Plus Dual Chip Câmera dupla 13MP Android 9.0', 'Motorola', '650.00', 'motoe6plus-removebg-preview.png', 'Azul Netuno', '64gb', '4gb', '6.1\"', '150g', 'Ruim'),
-(33, 'Smartphone Moto One Fusion Dual Chip Câmera dupla 48MP + 8MP + 5MP + 2MP Android 10.0', 'Motorola', '1400.00', 'motoonefusion-removebg-preview.png', 'Azul', '128gb', '4gb', '6.5\"', '400g', 'Excelente');
+(33, 'Smartphone Moto One Fusion Dual Chip Câmera dupla 48MP + 8MP + 5MP + 2MP Android 10.0', 'Motorola', '1400.00', 'motoonefusion-removebg-preview.png', 'Azul', '128gb', '4gb', '6.5\"', '400g', 'Excelente'),
+(35, 'IPhone 11 Desbloqueado 12MP IOS 13', 'Apple', '5500.00', 'iphone11-removebg-preview.png', 'Preto', '128gb', '4gb', '6.1', '200g', 'Excelente'),
+(36, 'IPhone 12 Pro Desbloqueado 12MP IOS 14', 'Apple', '6900.00', 'iphone12pro-removebg-preview.png', 'Azul Pacífico', '128gb', '6gb', '6.7', '230g', 'Bom'),
+(37, 'IPhone 7 Desbloqueado 12MP IOS 13', 'Apple', '1300.00', 'iphone7-removebg-preview.png', 'Rosa Dourado', '128gb', '2gb', '4.7', '140g', 'Ruim');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `usuario`
+-- Estrutura para tabela `usuario`
 --
 
 CREATE TABLE `usuario` (
@@ -161,92 +155,84 @@ CREATE TABLE `usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `usuario`
---
-
-INSERT INTO `usuario` (`ID`, `NOME`, `SENHA`, `CPF`, `NIVEL`, `IMG`, `ATIVO`) VALUES
-(17, 'Wesley', '123', '49106275885', 2, 'wesley.jpg', 1),
-(19, 'Usuario', '123', '2222', 1, 'user-profile.jfif', 1);
-
---
--- Índices para tabelas despejadas
+-- Índices de tabelas apagadas
 --
 
 --
--- Índices para tabela `carrinho`
+-- Índices de tabela `carrinho`
 --
 ALTER TABLE `carrinho`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Índices para tabela `carrossel`
+-- Índices de tabela `carrossel`
 --
 ALTER TABLE `carrossel`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Índices para tabela `compraaberta`
+-- Índices de tabela `compraaberta`
 --
 ALTER TABLE `compraaberta`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Índices para tabela `comprafechada`
+-- Índices de tabela `comprafechada`
 --
 ALTER TABLE `comprafechada`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Índices para tabela `produto`
+-- Índices de tabela `produto`
 --
 ALTER TABLE `produto`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Índices para tabela `usuario`
+-- Índices de tabela `usuario`
 --
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`ID`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT de tabelas apagadas
 --
 
 --
 -- AUTO_INCREMENT de tabela `carrinho`
 --
 ALTER TABLE `carrinho`
-  MODIFY `ID` bigint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
+  MODIFY `ID` bigint(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `carrossel`
 --
 ALTER TABLE `carrossel`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT de tabela `compraaberta`
 --
 ALTER TABLE `compraaberta`
-  MODIFY `ID` bigint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `ID` bigint(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `comprafechada`
 --
 ALTER TABLE `comprafechada`
-  MODIFY `ID` bigint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `ID` bigint(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `produto`
 --
 ALTER TABLE `produto`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
