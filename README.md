@@ -4,7 +4,7 @@
 
 <p> Trabalho de conclusão do 2° semestre do curso de Desenvolvimento de sistema da Etec de São Roque, Matéria PHP (não orientado), trabalho de uso didático!!!</p>
 <br />
-<h3>Tudo isso envolvendo telas (para usuários), como:<p>
+<h3>Envolvendo telas (para usuários), como:<p>
   <p>
     <br />- Login/Cadastrar novo usuário/Esqueceu senha;
     <br />- Index (Navegação global, perfil usuário, cards de produtos e produtos por marca;
