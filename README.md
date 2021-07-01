@@ -27,5 +27,6 @@
   </p>
 <p>Este projeto foi um projeto final de conclusão de 2° semestre do curso técnico de desenvolvimento de sistema da etec de São Roque</p>
 <br>
+    <p>Um projeto feito por @WesleyRodrigues55 e @RicieriJM<p>
 <h5>Código disponibilizado para consulta</h5>
-<p>Um projeto feito por @WesleyRodrigues55 e @RicieriJM<p>
+
