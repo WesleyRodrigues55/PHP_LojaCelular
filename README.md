@@ -20,7 +20,7 @@
     <br />- Cadastros de produtos, usuario/adms, carrossel de imagens;
     <br />- Consulta de produtos, carrossel, usuários no sistema;
     <br />- Consulta inclui (exclusão, alteração de dados e alteração de foto;
-    <br />*Além de que o Amd poderá simular uma venda como um usuário.
+    <br />*Além de que o Adm poderá simular uma venda como um usuário.
     <br />- Perfil de Aministrador, podendo (alterar foto, nome, senha e inativar conta);
     <br />- Clique no produto e características do produto clicado (também 'categoria' por marca clicada);
     <br />- Carrinho com produtos adicionados, podendo remover o(s) produto(s);
