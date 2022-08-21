@@ -4,10 +4,6 @@
 
 ##### Trabalho de conclusão do 2° semestre do curso de Desenvolvimento de sistema da Etec de São Roque, Matéria PHP (não orientado), trabalho de uso didático!!!</p>
 
-<img src="1.png">
-<img src="2.png">
-<img src="3.png">
-
 ### Envolvendo telas (para usuários), como:<p>
 *  Login/Cadastrar novo usuário/Esqueceu senha;
 *  Index (Navegação global, perfil usuário, cards de produtos e produtos por marca;
@@ -15,7 +11,7 @@
 *  Clique no produto e características do produto clicado (também 'categoria' por marca clicada);
 *  Carrinho com produtos adicionados, podendo remover o(s) produto(s);
 
-### Para adiminstradores no sistema:
+### Para adiministradores do sistema:
 *  Login/Cadastrar novo usuário e administrador/alterar senha de usuarios e administradores, inativar ou eleger 'nivel' de conta de usuários;
 *  Index (Navegação global, perfil usuário, cards de produtos e produtos por marca, além do painel administrativo;
 *  Cadastros de produtos, usuario/adms, carrossel de imagens;
@@ -30,4 +26,8 @@
 
 ##### Um projeto feito por @WesleyRodrigues55 e @RicieriJM<p>
 ## Código disponibilizado para consulta</h5>
+
+<img src="1.png">
+<img src="2.png">
+<img src="3.png">
 
